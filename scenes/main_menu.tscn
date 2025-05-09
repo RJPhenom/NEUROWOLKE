@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://d1oi58t7stbuw"]
 
-[ext_resource type="Script" uid="uid://cbqp0bkwddhxk" path="res://main_menu.gd" id="1_l6cm7"]
+[ext_resource type="Script" uid="uid://cbqp0bkwddhxk" path="res://scripts/main_menu.gd" id="1_l6cm7"]
 [ext_resource type="Theme" uid="uid://llwmjcvp3pxj" path="res://styles/tros_theme.tres" id="2_ekxnf"]
 
 [node name="MainMenu" type="Control"]
@@ -18,7 +18,7 @@ script = ExtResource("1_l6cm7")
 layout_mode = 1
 anchors_preset = 9
 anchor_bottom = 1.0
-offset_right = 480.0
+offset_right = 720.0
 grow_vertical = 2
 theme_override_constants/margin_left = 50
 theme_override_constants/margin_top = 50
@@ -31,8 +31,47 @@ layout_mode = 2
 [node name="GameTitle" type="Label" parent="MenuMargin/MenuVBox"]
 layout_mode = 2
 theme = ExtResource("2_ekxnf")
-theme_override_font_sizes/font_size = 24
-text = "//TROSTLOSIGKEIT"
+theme_override_font_sizes/font_size = 32
+text = "//TROSTLOSIGKEIT
+"
+
+[node name="GameTitle2" type="Label" parent="MenuMargin/MenuVBox"]
+layout_mode = 2
+theme = ExtResource("2_ekxnf")
+theme_override_font_sizes/font_size = 16
+text = "::SEARCH FOR THE SOUL::
+
+
+"
+
+[node name="Preamble" type="Label" parent="MenuMargin/MenuVBox"]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+theme = ExtResource("2_ekxnf")
+theme_override_font_sizes/font_size = 12
+text = "The year is 2671. Humanity has spread to the stars. 
+
+You work in the HERRSCHAFT DEUTSCHE, a collection of star systems run by German Korporation Colonists.   
+
+It’s a time of war and chaos. Millions of people die daily. Several large corporations are fighting for galactic dominance. 
+
+You are an investigator named Albrecht Richter.
+
+You’re tasked with finding and eliminating KUNSTGEIST, androids bent on overthrowing humanity.
+
+You’ll perform a GEIST-KAMPFF TEST, an exam where you question a subject to determine if they’re Kunstgeist or humans. 
+
+
+
+
+
+
+Recently a massive hack happened at the Deutsche cloud operator NeuroWolke. Luckily the three perpetrators were captured. 
+
+Normally all three of them would be executed. However, this seems to be an inside job. The perpetrators are all mid ranking members of our Corporation.
+
+Based on the information which was stolen, we assume that one or more of the perpetrators are believed to be Kunstgeist. "
+autowrap_mode = 3
 
 [node name="MenuButtons" type="VBoxContainer" parent="MenuMargin/MenuVBox"]
 layout_mode = 2

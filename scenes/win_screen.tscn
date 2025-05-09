@@ -1,0 +1,60 @@
+[gd_scene load_steps=3 format=3 uid="uid://c0e5d7f8fuuw2"]
+
+[ext_resource type="Script" uid="uid://ckhw8kkmnevhv" path="res://scripts/end_screen.gd" id="1_6e1uj"]
+[ext_resource type="Theme" uid="uid://llwmjcvp3pxj" path="res://styles/tros_theme.tres" id="1_kq7ac"]
+
+[node name="EndScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6e1uj")
+
+[node name="MenuMargin" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 720.0
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="MenuVBox" type="VBoxContainer" parent="MenuMargin"]
+layout_mode = 2
+
+[node name="GameTitle" type="Label" parent="MenuMargin/MenuVBox"]
+layout_mode = 2
+theme = ExtResource("1_kq7ac")
+theme_override_font_sizes/font_size = 56
+text = "::VICTORY::
+"
+
+[node name="GameTitle2" type="Label" parent="MenuMargin/MenuVBox"]
+layout_mode = 2
+theme = ExtResource("1_kq7ac")
+theme_override_font_sizes/font_size = 24
+text = "//You have passed the tests."
+
+[node name="MenuButtons" type="VBoxContainer" parent="MenuMargin/MenuVBox"]
+layout_mode = 2
+size_flags_vertical = 10
+theme_override_constants/separation = 5
+
+[node name="PlayButton" type="Button" parent="MenuMargin/MenuVBox/MenuButtons"]
+layout_mode = 2
+theme = ExtResource("1_kq7ac")
+text = "//PLAY AGAIN"
+alignment = 0
+
+[node name="QuitButton" type="Button" parent="MenuMargin/MenuVBox/MenuButtons"]
+layout_mode = 2
+theme = ExtResource("1_kq7ac")
+text = "//QUIT"
+alignment = 0
+
+[connection signal="pressed" from="MenuMargin/MenuVBox/MenuButtons/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="MenuMargin/MenuVBox/MenuButtons/QuitButton" to="." method="_on_quit_button_pressed"]
