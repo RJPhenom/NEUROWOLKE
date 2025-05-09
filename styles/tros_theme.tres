@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=8 format=3 uid="uid://llwmjcvp3pxj"]
+[gd_resource type="Theme" load_steps=11 format=3 uid="uid://llwmjcvp3pxj"]
 
 [ext_resource type="StyleBox" uid="uid://bvn2bnbw41ts0" path="res://styles/button_hovered.tres" id="1_rj7j7"]
 [ext_resource type="FontFile" uid="uid://cv7ukspv2c85p" path="res://assets/PixelOperator8.ttf" id="1_tx48l"]
@@ -20,6 +20,41 @@ corner_detail = 5
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dwjk1"]
 
+[sub_resource type="ImageTexture" id="ImageTexture_0xgj1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kydd3"]
+content_margin_left = 4.0
+content_margin_top = 0.0
+content_margin_right = 4.0
+content_margin_bottom = 0.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n5jy5"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.75)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
 [resource]
 Button/colors/font_color = Color(0, 0.435294, 0.0862745, 1)
 Button/colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
@@ -38,7 +73,7 @@ Button/constants/align_to_largest_stylebox = 0
 Button/constants/h_separation = 4
 Button/constants/icon_max_width = 0
 Button/constants/outline_size = 0
-Button/font_sizes/font_size = 24
+Button/font_sizes/font_size = 16
 Button/fonts/font = ExtResource("1_tx48l")
 Button/styles/disabled = SubResource("StyleBoxFlat_0xgj1")
 Button/styles/focus = ExtResource("2_0xgj1")
@@ -56,3 +91,14 @@ Label/constants/shadow_outline_size = 1
 Label/font_sizes/font_size = 16
 Label/fonts/font = ExtResource("1_tx48l")
 Label/styles/normal = SubResource("StyleBoxEmpty_dwjk1")
+VScrollBar/icons/decrement = SubResource("ImageTexture_0xgj1")
+VScrollBar/icons/decrement_highlight = SubResource("ImageTexture_0xgj1")
+VScrollBar/icons/decrement_pressed = SubResource("ImageTexture_0xgj1")
+VScrollBar/icons/increment = SubResource("ImageTexture_0xgj1")
+VScrollBar/icons/increment_highlight = SubResource("ImageTexture_0xgj1")
+VScrollBar/icons/increment_pressed = SubResource("ImageTexture_0xgj1")
+VScrollBar/styles/grabber = ExtResource("1_rj7j7")
+VScrollBar/styles/grabber_highlight = ExtResource("3_tx48l")
+VScrollBar/styles/grabber_pressed = ExtResource("1_rj7j7")
+VScrollBar/styles/scroll = SubResource("StyleBoxFlat_kydd3")
+VScrollBar/styles/scroll_focus = SubResource("StyleBoxFlat_n5jy5")
