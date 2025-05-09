@@ -1,0 +1,7 @@
+[gd_resource type="FontVariation" load_steps=2 format=3 uid="uid://c7nr1mvrsug5y"]
+
+[ext_resource type="FontFile" uid="uid://cv7ukspv2c85p" path="res://assets/PixelOperator8.ttf" id="1_kxbha"]
+
+[resource]
+base_font = ExtResource("1_kxbha")
+spacing_bottom = 1

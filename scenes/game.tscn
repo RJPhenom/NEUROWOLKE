@@ -36,9 +36,9 @@ theme_override_constants/separation = 50
 [node name="SubjectLabel" type="Label" parent="DialogueMargin/DialogueVbox/SubjectHbox"]
 layout_mode = 2
 theme = ExtResource("1_uwrxv")
-text = "SUBJECT:
-ORIGIN:
-CRIME:"
+text = "//SUBJECT:
+//ORIGIN:
+//CRIME:"
 
 [node name="SubjectDetails" type="Label" parent="DialogueMargin/DialogueVbox/SubjectHbox"]
 layout_mode = 2

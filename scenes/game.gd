@@ -66,14 +66,15 @@ func write_to_dialogue_options(options: Array):
 	for child in dialogue_options.get_children():
 		child.queue_free()
 	
-	for option in options:
+	for i in options.size():
+		var option = options[i]
 		var option_button = Button.new()
 		option_button.theme = dialogue_theme
 		option_button.alignment = HORIZONTAL_ALIGNMENT_LEFT
 		option_button.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-		option_button.text = option[0]
+		option_button.text = "//" + str(i + 1) + ".   " + option[0]
 		option_button.pressed.connect(exec_dialogue_option.bind(option))
-		
+
 		dialogue_options.add_child(option_button)
 
 # Dialogue option button press handler
@@ -82,8 +83,8 @@ func exec_dialogue_option(option: Array):
 	var option_response = get_dialogue_response(option[1])
 	var response_options = get_dialogue_options(option_response[1])
 	
-	write_to_dialogue_history(option_text)
-	write_to_dialogue_history(option_response[0])
+	write_to_dialogue_history("//YOU:   " + option_text)
+	write_to_dialogue_history("//SUBJECT:   " + option_response[0])
 	write_to_dialogue_options(response_options)
 
 # Sets subject details

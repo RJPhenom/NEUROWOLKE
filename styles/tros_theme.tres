@@ -1,7 +1,7 @@
 [gd_resource type="Theme" load_steps=11 format=3 uid="uid://llwmjcvp3pxj"]
 
+[ext_resource type="FontVariation" uid="uid://c7nr1mvrsug5y" path="res://assets/tros_font.tres" id="1_0xgj1"]
 [ext_resource type="StyleBox" uid="uid://bvn2bnbw41ts0" path="res://styles/button_hovered.tres" id="1_rj7j7"]
-[ext_resource type="FontFile" uid="uid://cv7ukspv2c85p" path="res://assets/PixelOperator8.ttf" id="1_tx48l"]
 [ext_resource type="StyleBox" uid="uid://b70b88pvhjpe8" path="res://styles/button_normal.tres" id="1_vvg22"]
 [ext_resource type="StyleBox" uid="uid://cqu40uygl4bv0" path="res://styles/button_focused.tres" id="2_0xgj1"]
 [ext_resource type="StyleBox" uid="uid://dkaxspclejyuu" path="res://styles/button_pressed.tres" id="3_tx48l"]
@@ -74,7 +74,7 @@ Button/constants/h_separation = 4
 Button/constants/icon_max_width = 0
 Button/constants/outline_size = 0
 Button/font_sizes/font_size = 16
-Button/fonts/font = ExtResource("1_tx48l")
+Button/fonts/font = ExtResource("1_0xgj1")
 Button/styles/disabled = SubResource("StyleBoxFlat_0xgj1")
 Button/styles/focus = ExtResource("2_0xgj1")
 Button/styles/hover = ExtResource("1_rj7j7")
@@ -89,7 +89,7 @@ Label/constants/shadow_offset_x = 1
 Label/constants/shadow_offset_y = 1
 Label/constants/shadow_outline_size = 1
 Label/font_sizes/font_size = 16
-Label/fonts/font = ExtResource("1_tx48l")
+Label/fonts/font = ExtResource("1_0xgj1")
 Label/styles/normal = SubResource("StyleBoxEmpty_dwjk1")
 VScrollBar/icons/decrement = SubResource("ImageTexture_0xgj1")
 VScrollBar/icons/decrement_highlight = SubResource("ImageTexture_0xgj1")
