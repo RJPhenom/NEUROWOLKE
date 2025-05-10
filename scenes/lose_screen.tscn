@@ -1,9 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://bic5rsev784f0"]
+[gd_scene load_steps=4 format=3 uid="uid://bic5rsev784f0"]
 
 [ext_resource type="Script" uid="uid://ckhw8kkmnevhv" path="res://scripts/end_screen.gd" id="1_1n1m7"]
 [ext_resource type="Theme" uid="uid://llwmjcvp3pxj" path="res://styles/tros_theme.tres" id="2_73mov"]
+[ext_resource type="AudioStream" uid="uid://1r0rlvvdkyf8" path="res://assets/sfx/beep.wav" id="3_73mov"]
 
-[node name="EndScreen" type="Control"]
+[node name="LoseScreen" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -55,6 +56,9 @@ layout_mode = 2
 theme = ExtResource("2_73mov")
 text = "//QUIT"
 alignment = 0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_73mov")
 
 [connection signal="pressed" from="MenuMargin/MenuVBox/MenuButtons/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="MenuMargin/MenuVBox/MenuButtons/QuitButton" to="." method="_on_quit_button_pressed"]

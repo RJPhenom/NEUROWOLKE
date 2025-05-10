@@ -74,3 +74,5 @@ autowrap_mode = 3
 layout_mode = 2
 size_flags_vertical = 8
 theme_override_constants/separation = 10
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

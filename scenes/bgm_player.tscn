@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bwwabmf1x4hl8"]
+
+[ext_resource type="AudioStream" uid="uid://cruojv1kfgyqg" path="res://assets/music/MyVeryOwnDeadShip.ogg" id="1_wk4np"]
+
+[node name="BgmPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_wk4np")
