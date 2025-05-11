@@ -9,17 +9,14 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = -2.0
 grow_horizontal = 2
 grow_vertical = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
 script = ExtResource("1_l6cm7")
 
 [node name="MarginContainer2" type="MarginContainer" parent="."]
 layout_mode = 0
-offset_right = 1090.0
-offset_bottom = 1048.0
+offset_right = 1081.0
+offset_bottom = 1080.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer2"]
 layout_mode = 2
@@ -28,7 +25,7 @@ layout_mode = 2
 layout_mode = 2
 theme_override_constants/margin_left = 50
 theme_override_constants/margin_top = 50
-theme_override_constants/margin_right = 50
+theme_override_constants/margin_right = 25
 theme_override_constants/margin_bottom = 50
 
 [node name="MenuVBox" type="VBoxContainer" parent="MarginContainer2/HBoxContainer/MenuMargin"]
@@ -38,17 +35,8 @@ layout_mode = 2
 layout_mode = 2
 theme = ExtResource("2_ekxnf")
 theme_override_font_sizes/font_size = 32
-text = "//TROSTLOSIGKEIT
-"
-
-[node name="GameTitle2" type="Label" parent="MarginContainer2/HBoxContainer/MenuMargin/MenuVBox"]
-layout_mode = 2
-theme = ExtResource("2_ekxnf")
-theme_override_font_sizes/font_size = 16
-text = "::SEARCH FOR THE SOUL::
-
-
-"
+text = "//NEUROWOLKE         
+ "
 
 [node name="Preamble" type="Label" parent="MarginContainer2/HBoxContainer/MenuMargin/MenuVBox"]
 custom_minimum_size = Vector2(1, 1)
@@ -83,7 +71,6 @@ You must perform an interrogation.
 
 Discover who are loyal members of the company and eliminate the perpetrators."
 autowrap_mode = 3
-justification_flags = 235
 
 [node name="MenuButtons" type="VBoxContainer" parent="MarginContainer2/HBoxContainer/MenuMargin/MenuVBox"]
 layout_mode = 2

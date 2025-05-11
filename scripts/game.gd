@@ -29,11 +29,12 @@ func _ready():
 	keystroke_player = get_node("AudioStreamPlayer")
 	
 	# Control references
-	dialogue_history = get_node("DialogueMargin/DialogueVbox/DialogueHistoryScrollbox/DialogueHistoryVbox/DialogueHistoryLabel")
-	dialogue_scrollbox = get_node("DialogueMargin/DialogueVbox/DialogueHistoryScrollbox")
-	dialogue_options = get_node("DialogueMargin/DialogueVbox/DialogueOptionsVbox")
+	dialogue_history = get_node("MarginContainer2/HBoxContainer/DialogueMargin/DialogueVbox/DialogueHistoryScrollbox/DialogueHistoryVbox/DialogueHistoryLabel")
+	dialogue_scrollbox = get_node("MarginContainer2/HBoxContainer/DialogueMargin/DialogueVbox/DialogueHistoryScrollbox")
+	dialogue_options = get_node("MarginContainer2/HBoxContainer/DialogueMargin/DialogueVbox/DialogueOptionsVbox")
+	dialogue_options.add_spacer(true)
 	
-	subject_details = get_node("DialogueMargin/DialogueVbox/SubjectHbox/SubjectDetails")
+	subject_details = get_node("MarginContainer2/HBoxContainer/DialogueMargin/DialogueVbox/SubjectHbox/SubjectDetails")
 	
 	# Initializes the first subject conversation
 	init_new_subject(subject_tracker)
@@ -96,7 +97,7 @@ func get_dialogue_response(id: int) -> Array:
 		003212:
 			return ["SUBJECT", "I have no idea what I could have done. I’ve been nothing but friendly to the lady.", 026]
 		003213:
-			return ["SUBJECT", "She did say the same thing but I just assumed she was playing hard to get.", 027]
+			return ["SUBJECT", "She did say the same thing, but I just assumed she was playing hard to get!", 027]
 		003214:
 			return ["SUBJECT", "Would be a shame if she was. But…", 028]
 		003215:
@@ -195,6 +196,37 @@ func get_dialogue_response(id: int) -> Array:
 			You have done your job adequately, detective.", 058]
 		004201:
 			return ["SYS", "END_WIN_KUNST", 000]
+		005000:
+			return ["SUBJECT","[Her attitude seems hostile]", 060]
+		005001:
+			return ["SUBJECT", "Is that supposed to help you figure out if I’m a Kunstgeist in some way?", 061]
+		006000:
+			return ["SYS", "", 061]
+		006100:
+			return ["SYS", "", 063]
+		006101:
+			return ["SUBJECT", "I’m from Koto...", 064]
+		006102:
+			return ["SUBJECT", "It’s mostly a Japanese controlled quadrant. The companies have a monopoly on rare metals there, mostly used for computing. They also have better performing AI.", 065]
+		006103:
+			return ["SUBJECT", "Yeah, I’m from Shitamachi... one of the lower class districts. So either you help with mining operations or become a Netrunner. I chose the latter.", 061]
+		006100:
+			return ["SUBJECT", "", 061]
+		006100:
+			return ["SUBJECT", "", 061]
+		006100:
+			return ["SUBJECT", "", 061]
+		006100:
+			return ["SUBJECT", "", 061]
+		006100:
+			return ["SUBJECT", "", 061]
+		006100:
+			return ["SUBJECT", "", 061]
+		006100:
+			return ["SUBJECT", "", 061]
+		006100:
+			return ["SUBJECT", "", 061]
+		
 		_:
 			return ["SYS", "Unknown option: The void stares back.", 000]
 
@@ -283,7 +315,7 @@ func get_dialogue_options(id: int) -> Array:
 			]
 		018:
 			return [
-				["TThat’s convenient if you’re telling the truth, you did take a lot of sensitive data. So you didn’t share the data with anyone?", 003134]
+				["That’s convenient if you’re telling the truth, you did take a lot of sensitive data. So you didn’t share the data with anyone?", 003134]
 			]
 		019:
 			return [
@@ -323,7 +355,7 @@ func get_dialogue_options(id: int) -> Array:
 			]
 		027:
 			return [
-				["I’ll cut to the chase. Do you think she’s a kunstgeist?", 003210]
+				["I’ll cut to the chase. Do you think she’s a kunstgeist?", 003214]
 			]
 		028:
 			return [
@@ -466,9 +498,59 @@ func get_dialogue_options(id: int) -> Array:
 			]
 		059:
 			return [
-				["", 003210]
+				["Hello Mrs. Kumo. I’m here to determine if you’re a kunstgeist.", 005000],
+				["What’s with the cigarette burns? Are those self-inflicted?", 005001],
+				["[PROCEED TO QUESTIONS]", 006000]
 			]
 		060:
+			return [
+				["I suppose not, let's begin.", 006000],
+				["[Do not respond]", 006000]
+			]
+		061:
+			return [
+				["[INQUIRE ABOUT HER PAST]", 006100],
+				["[INQUIRE ABOUT HER CONSPIRATORS]", 006200],
+				["[PROCEED TO GEIST-KAMPFF TEST]", 006300]
+			]
+		062:
+			return [
+				["[INQUIRE ABOUT HER PAST]", 006100],
+				["[INQUIRE ABOUT HER CONSPIRATORS]", 006200],
+				["[PROCEED TO GEIST-KAMPFF TEST]", 006300],
+				["[RENDER JUDGEMENT]", 010000]
+			]
+		063:
+			return [
+				["Where are you from, originally?", 006101],
+				["Tell me about your family?", 003210],
+				["Please state your position and job description for the record.", 003210],
+			]
+		064:
+			return [
+				["Tell me about that. ", 006102]
+			]
+		065:
+			return [
+				["That's why you became a Netrunner?", 006103]
+			]
+		066:
+			return [
+				["", 003210]
+			]
+		067:
+			return [
+				["", 003210]
+			]
+		068:
+			return [
+				["", 003210]
+			]
+		069:
+			return [
+				["", 003210]
+			]
+		070:
 			return [
 				["", 003210]
 			]
@@ -536,7 +618,7 @@ func write_to_dialogue_history(speaker: String, text: String, scrolling: bool, o
 		if appendage_char != "\n":
 			play_random_keystroke()
 			scroll_to_end()
-			await get_tree().create_timer(0.04).timeout
+			await get_tree().create_timer(0.004).timeout
 		else:
 			scroll_to_end()
 			await get_tree().create_timer(0.4).timeout
@@ -547,6 +629,8 @@ func write_to_dialogue_history(speaker: String, text: String, scrolling: bool, o
 func clear_dialogue_options():
 	for child in dialogue_options.get_children():
 		child.queue_free()
+	
+	dialogue_options.add_spacer(true)
 
 # Writes options to the vbox as buttons for dialogue interaction
 func write_to_dialogue_options(options: Array):
@@ -562,7 +646,9 @@ func write_to_dialogue_options(options: Array):
 		
 		return
 	
+	# Clear previous subject dialogue
 	clear_dialogue_options()
+	
 	for i in options.size():
 		var option = options[i]
 		var option_button = Button.new()
@@ -585,6 +671,8 @@ func exec_dialogue_option(option: Array):
 		
 		write_to_dialogue_history("YOU", option_text, false)
 		write_to_dialogue_history(option_response[0], option_response[1], true, response_options)
+		
+		scroll_to_end()
 
 # Sets subject details
 func set_subject_details(subject: Array):
@@ -599,7 +687,7 @@ func get_subject(subject_id: int) -> Array:
 
 				It’s second function is to eliminate."]
 		2:
-			return ["YAMI KUMO", "鉱東:下町 [KOTO: SHITAMACHI REGION]", "ICE BREAKER", 001, 
+			return ["YAMI KUMO", "鉱東:下町 [KOTO: SHITAMACHI REGION]", "ICE BREAKER", 059, 
 				"Your second subject is brought in. She is a slender Japanese woman, with several tattoos. You notice cigarette burns on her left wrist. Her name is Yami Kumo. A netrunner.
 
 				Mrs. Kumo sits in the interrogation chair. She puts the Shinka-seishi on herself."]
@@ -613,8 +701,8 @@ func get_subject(subject_id: int) -> Array:
 
 # Initializes a new subject and conversation
 func init_new_subject(subject_id: int):
-	# Clear dialogue history
-	dialogue_history.text = ""
+	# Clear last subject 
+	clear_dialogue_history()
 	
 	# Fetch subject
 	var subject = get_subject(subject_id)
@@ -637,3 +725,6 @@ func play_random_keystroke():
 
 func scroll_to_end():
 	dialogue_scrollbox.scroll_vertical = dialogue_scrollbox.get_v_scroll_bar().max_value
+
+func clear_dialogue_history():
+	dialogue_history.text = ""
