@@ -1,41 +1,47 @@
-[gd_scene load_steps=3 format=3 uid="uid://d1oi58t7stbuw"]
+[gd_scene load_steps=4 format=3 uid="uid://d1oi58t7stbuw"]
 
 [ext_resource type="Script" uid="uid://cbqp0bkwddhxk" path="res://scripts/main_menu.gd" id="1_l6cm7"]
 [ext_resource type="Theme" uid="uid://llwmjcvp3pxj" path="res://styles/tros_theme.tres" id="2_ekxnf"]
+[ext_resource type="FontFile" uid="uid://cvi87wv605uvt" path="res://assets/bulletinV1.ttf" id="3_bqqt6"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = -2.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_l6cm7")
 
-[node name="MenuMargin" type="MarginContainer" parent="."]
-layout_mode = 1
-anchors_preset = 9
-anchor_bottom = 1.0
-offset_right = 720.0
-grow_vertical = 2
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 1090.0
+offset_bottom = 1048.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer2"]
+layout_mode = 2
+
+[node name="MenuMargin" type="MarginContainer" parent="MarginContainer2/HBoxContainer"]
+layout_mode = 2
 theme_override_constants/margin_left = 50
 theme_override_constants/margin_top = 50
 theme_override_constants/margin_right = 50
 theme_override_constants/margin_bottom = 50
 
-[node name="MenuVBox" type="VBoxContainer" parent="MenuMargin"]
+[node name="MenuVBox" type="VBoxContainer" parent="MarginContainer2/HBoxContainer/MenuMargin"]
 layout_mode = 2
 
-[node name="GameTitle" type="Label" parent="MenuMargin/MenuVBox"]
+[node name="GameTitle" type="Label" parent="MarginContainer2/HBoxContainer/MenuMargin/MenuVBox"]
 layout_mode = 2
 theme = ExtResource("2_ekxnf")
 theme_override_font_sizes/font_size = 32
 text = "//TROSTLOSIGKEIT
 "
 
-[node name="GameTitle2" type="Label" parent="MenuMargin/MenuVBox"]
+[node name="GameTitle2" type="Label" parent="MarginContainer2/HBoxContainer/MenuMargin/MenuVBox"]
 layout_mode = 2
 theme = ExtResource("2_ekxnf")
 theme_override_font_sizes/font_size = 16
@@ -44,51 +50,123 @@ text = "::SEARCH FOR THE SOUL::
 
 "
 
-[node name="Preamble" type="Label" parent="MenuMargin/MenuVBox"]
+[node name="Preamble" type="Label" parent="MarginContainer2/HBoxContainer/MenuMargin/MenuVBox"]
 custom_minimum_size = Vector2(1, 1)
 layout_mode = 2
 theme = ExtResource("2_ekxnf")
 theme_override_font_sizes/font_size = 12
-text = "The year is 2671. Humanity has spread to the stars. 
+text = "//SYSTEM:   The year is 2871. 
 
-You work in the HERRSCHAFT DEUTSCHE, a collection of star systems run by German Korporation Colonists.   
+Technology controls our lives.
 
-It’s a time of war and chaos. Millions of people die daily. Several large corporations are fighting for galactic dominance. 
+Large corporations struggle for dominance.
 
-You are an investigator named Albrecht Richter.
+You work in the HERRSCHAFT DEUTSCHE, a collection of star systems run by German Korporation Colonists.
 
-You’re tasked with finding and eliminating KUNSTGEIST, androids bent on overthrowing humanity.
+You are Detective Albrecht Richter, tasked with finding and eliminating KUNSTGEIST: humanlike androids that have gone rogue.
 
-You’ll perform a GEIST-KAMPFF TEST, an exam where you question a subject to determine if they’re Kunstgeist or humans. 
+To identify kunstgeist is difficult. you must perform a GEIST-KAMPFF TEST. 
 
-
-
-
+Use it to draw out your suspect's humanity… or its absence.
 
 
-Recently a massive hack happened at the Deutsche cloud operator NeuroWolke. Luckily the three perpetrators were captured. 
 
-Normally all three of them would be executed. However, this seems to be an inside job. The perpetrators are all mid ranking members of our Corporation.
+::MISSION::
 
-Based on the information which was stolen, we assume that one or more of the perpetrators are believed to be Kunstgeist. "
+Recently there was a massive cyber attack on cloud data company NEUROWOLKE.  
+
+A  rogue kunstgeist collective claimed responsibility. Three perpetrators were caught.
+
+Normally they would receive summary execution. However, this attack seems to be an inside job: the perpetrators are all mid ranking members of NeuroWolke. 
+
+You must perform an interrogation. 
+
+Discover who are loyal members of the company and eliminate the perpetrators."
 autowrap_mode = 3
+justification_flags = 235
 
-[node name="MenuButtons" type="VBoxContainer" parent="MenuMargin/MenuVBox"]
+[node name="MenuButtons" type="VBoxContainer" parent="MarginContainer2/HBoxContainer/MenuMargin/MenuVBox"]
 layout_mode = 2
 size_flags_vertical = 10
 theme_override_constants/separation = 5
 
-[node name="PlayButton" type="Button" parent="MenuMargin/MenuVBox/MenuButtons"]
+[node name="PlayButton" type="Button" parent="MarginContainer2/HBoxContainer/MenuMargin/MenuVBox/MenuButtons"]
 layout_mode = 2
 theme = ExtResource("2_ekxnf")
 text = "//PLAY"
 alignment = 0
 
-[node name="QuitButton" type="Button" parent="MenuMargin/MenuVBox/MenuButtons"]
+[node name="QuitButton" type="Button" parent="MarginContainer2/HBoxContainer/MenuMargin/MenuVBox/MenuButtons"]
 layout_mode = 2
 theme = ExtResource("2_ekxnf")
 text = "//QUIT"
 alignment = 0
 
-[connection signal="pressed" from="MenuMargin/MenuVBox/MenuButtons/PlayButton" to="." method="_on_play_button_pressed"]
-[connection signal="pressed" from="MenuMargin/MenuVBox/MenuButtons/QuitButton" to="." method="_on_quit_button_pressed"]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer2/HBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer2/HBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("2_ekxnf")
+theme_override_fonts/font = ExtResource("3_bqqt6")
+theme_override_font_sizes/font_size = 8
+text = "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@:#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@:::+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@:::::-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@::::::::@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@::::::::::@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@::::::::::::@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*::::::::::::::@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@:::::::::::::::::@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@:::::::::::::::::::@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@:::::::::::::::::::::@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@:::::::::::::::::::::::@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@:::::::::::::::::::::::::%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@:::::::::::::::::::::::::::+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@:::::::::::::::::::::::::::::-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@::::::::::::::::::::::::::::::::@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@::::::::::::::::@:::::::::::::::::@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@:::::::::::::::::@@:::::::::::::::::@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@+:::::::::::::::::@@@::::::::::::::::::@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@:::::::::::::::::::@@@#::::::::::::::::::@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@:::::::::::::::::::+@@@@:::::::::::::::::::@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@::::::::::::::::::::@@@@@::::::::::::::::::::@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@:::::::::::::::::::::@@@@@@::::::::::::::::::::@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@:::::::::::::::::::::@@@@@@@:::::::::::::::::::::#@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@::::::::::::::::::::::@@@@@@@@:::::::::::::::::::::+@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@::::::::::::::::::::::%@@@@@@@@::::::::::::::::::::::-@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@:::::::::::::::::::::::@@@@@@@@@-:::::::::::::::::::::::@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@::::::::::::::::::::::::@@@@@@@@@@::::::::::::::::::::::::@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@::::::::::::::::::::::::@@@@@@@@@@@:::::::::::::::::::::::::@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@+:::::::::::::::::::::::::@@@@@@@@@@@@:::::::::::::::::::::::::@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@::::::::::::::::::::::::::@@@@@@@@@@@@@::::::::::::::::::::::::::@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@:::::::::::::::::::::::::::@@@@@@@@@@@@@%::::::::::::::::::::::::::@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@:::::::::::::::::::::::::::=@@@@@@@@@@@@@@:::::::::::::::::::::::::::@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@::::::::::::::::::::::::::::@@@@@@@@@@@@@@@::::::::::::::::::::::::::::@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@:::::::::::::::::::::::::::::@@@@@@@@@@@@@@@@::::::::::::::::::::::::::::#@@@@@@@@@@@@@
+@@@@@@@@@@@@:::::::::::::::::::::::::::::@@@@@@@@@@@@@@@@@:::::::::::::::::::::::::::::+@@@@@@@@@@@@
+@@@@@@@@@@@::::::::::::::::::::::::::::::@@@@@@@@@@@@@@@@@@::::::::::::::::::::::::::::::@@@@@@@@@@@
+@@@@@@@@@@::::::::::::::::::::::::::::::%@@@@@@@@@@@@@@@@@@:::::::::::::::::::::::::::::::@@@@@@@@@@
+@@@@@@@@@:::::::::::::::::::::::::::::::@@@@@@@@@@@@@@@@@@@=:::::::::::::::::::::::::::::::@@@@@@@@@
+@@@@@@@%:::::::::::::::::::::::::::::::-@@@@@@@@@@@@@@@@@@@@::::::::::::::::::::::::::::::::@@@@@@@@
+@@@@@@+::::::::::::::::::::::::::::::::@@@@@@@@@@@@@@@@@@@@@:::::::::::::::::::::::::::::::::@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@..-@@..+@.....*@..@@@..@@....%@@@@%...*@@...@@..@@..*@@:. .@@@@..@@@@..@@@..++.....@@@@@@@@@
+@@@@@@@@. ..@  +@  ***%@  @@@  @@ .+...@@ ..@:..#@..@*. *@. @:..*@...@@. @@@@. @=. @@+ .***@@@@@@@@@
+@@@@@@@@. .... +@  ...@@  @@@  @@ .%=..@. .@@@@ .@..%....@..@. @@@@. .@. @@@@. . :@@@+ .. :@@@@@@@@@
+@@@@@@@@. %-   +@  @@@@@ .@@@  @@ .. .@@...@@@...@#...+... @@..#@@@. %@. @@@@. @. +@@+ .@@@@@@@@@@@@
+@@@@@@@@. %@=..+@     *@+.  ...@@..@@..%@..   ..@@@...@@. .@@@.   ..=@@..  .@..@@...@+.   .@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+horizontal_alignment = 3
+vertical_alignment = 3
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
+[connection signal="pressed" from="MarginContainer2/HBoxContainer/MenuMargin/MenuVBox/MenuButtons/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="MarginContainer2/HBoxContainer/MenuMargin/MenuVBox/MenuButtons/QuitButton" to="." method="_on_quit_button_pressed"]
