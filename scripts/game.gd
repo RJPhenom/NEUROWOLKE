@@ -209,24 +209,299 @@ func get_dialogue_response(id: int) -> Array:
 		006102:
 			return ["SUBJECT", "It’s mostly a Japanese controlled quadrant. The companies have a monopoly on rare metals there, mostly used for computing. They also have better performing AI.", 065]
 		006103:
-			return ["SUBJECT", "Yeah, I’m from Shitamachi... one of the lower class districts. So either you help with mining operations or become a Netrunner. I chose the latter.", 061]
-		006100:
-			return ["SUBJECT", "", 061]
-		006100:
-			return ["SUBJECT", "", 061]
-		006100:
-			return ["SUBJECT", "", 061]
-		006100:
-			return ["SUBJECT", "", 061]
-		006100:
-			return ["SUBJECT", "", 061]
-		006100:
-			return ["SUBJECT", "", 061]
-		006100:
-			return ["SUBJECT", "", 061]
-		006100:
-			return ["SUBJECT", "", 061]
-		
+			return ["SUBJECT", "Yeah, I’m from Shitamachi... one of the lower class districts. So either you help with mining operations or become a Netrunner. I chose the latter.", 062]
+		006104:
+			return ["SUBJECT", "None.", 066]
+		006105:
+			return ["SUBJECT", "Had… They aren’t around.", 067]
+		006106:
+			return ["SUBJECT", "I don’t see how this is relevant.", 068]
+		006107:
+			return ["NARRATOR", "[She lets out a grunted sigh, clearly irritated]
+			
+			They died in a mining accident. Some dumbass wasn’t monitoring the mining equipment and the mine collapsed, with my still family inside.", 069]
+		006108:
+			return ["SUBJECT", "My spouse was showing them around the mine, we needed to give them a head start in life. So we showed them the work they’d be doing... anyway, that's why I left Shitamachi.", 062]
+		006109:
+			return ["SYS", "", 062]
+		006120:
+			return ["SUBJECT", "Netrunner. I run ICE Breakers for corporate SecOps. Basically, I hack things.", 070]
+		006121:
+			return ["SUBJECT", "Started at a young age. Once I flunked the physical for working the mines, it was just sorta expected. That's how it is in Shitamachi.", 071]
+		006122:
+			return ["SUBJECT", "I didn’t go into the details... just enough to make sure we had the right files.", 062]
+		006200:
+			return ["SYS", "", 072]
+		006210:
+			return ["SUBJECT", "I haven’t worked with him that long but Adler seems like a pretty organized man. Always focused on work. I don’t think he has much of a social life outside of work.", 073]
+		006211:
+			return ["SUBJECT", "Yeah, he seems very loyal to NeuroWolke. Got really annoyed when Andersen was badmouthing the company.", 074]
+		006212:
+			return ["SUBJECT", "I can’t say for sure, but I doubt it. I mean he always does everything by the book. He gets really angry if things don’t go to plan. ", 075]
+		006213:
+			return ["SUBJECT", "He was livid when we got arrested, I think he blames me. It caught him by surprise. We were acting on official orders after all... Or so we thought.", 076]
+		006214:
+			return ["SUBJECT", "Yeah, anyone would be.", 062]
+		006220:
+			return ["SUBJECT", "The man was unprofessional and a pervert.", 077]
+		006221:
+			return ["SUBJECT", "Damn, really? He always seemed like he was trying a bit too hard. I just thought he was an asshole... but I guess his unwanted advances were all part of the act.", 078]
+		006222:
+			return ["SUBJECT", "Good riddance I say. Now can I leave?", 079]
+		006223:
+			return ["SUBJECT", "I may resent the company, but I’m not a traitor", 080]
+		006224:
+			return ["SUBJECT", "… Yes, I had to make sure we got the right information.", 062]
+		006230:
+			return ["SUBJECT", "Our leader, Hans Adler went ahead and shut down the security cameras. Once everything was all clear he gave us the signal to come into the server room.", 081]
+		006231:
+			return ["SUBJECT", "We planned it when we knew guards would be short staffed. Hans did his research. Which is more than I can say about Andersen. That jerk didn’t have a care in the world.", 082]
+		006232:
+			return ["SUBJECT", "We proceeded to the server room, I went into the system, found the files we were looking for and uploaded them to Andersen’s storage device. As we tried to leave we got arrested.", 083]
+		006234:
+			return ["SUBJECT", "None. I stayed with the other two the entire time.", 084]
+		006235:
+			return ["SUBJECT", "Well I...", 085]
+		006236:
+			return ["SUBJECT", "I don't know if I can trust you.", 086]
+		006237:
+			return ["SUBJECT", "Fine. While the files were uploading to Andersen’s brain, I noticed someone put a computer virus in the server room's mainframe terminal. It was a timed cyber attack that would have leaked all the security information NeuroWolke had on Neubayern. If that info got out, it could do some real damage… not to mention possibly spoil the op. I managed to stop the virus before it did any damage, but using the terminal without the clearance code set off the alarm that got us caught.", 087]
+		006238:
+			return ["SUBJECT", "Didn’t want the other two to know I’m the reason we got caught… but that’s not why I kept it a secret. The virus could have only been uploaded by someone with high level clearance. If that person finds out I stopped the virus, it could put a target on my back.  I don’t need that kind of attention.", 088]
+		006239:
+			return ["SUBJECT", "I don't want innocent folks to die. NeuroWolke protects them with that info... as fucked up as the corp may be.", 062]
+		007000:
+			return ["SYS", "", 089]
+		007001:
+			return ["SUBJECT", "Go ahead.", 090]
+		007002:
+			return ["SUBJECT", "Gross. I wouldn’t eat a tortoise.", 091]
+		007003:
+			return ["SUBJECT", "You just gonna keep telling me what I do in this test? Or do I eventually get to answer.", 092]
+		007004:
+			return ["SUBJECT", "Well I don’t like Scorpions but I wouldn’t squash nothing ‘ganic. That’s fucked up. At least try and sell it.", 094]
+		007005:
+			return ["NARRATOR", "[She seems to scowl through the Shinka-seishi]", 094]
+		007006:
+			return ["SUBJECT", "Then why ask?", 093]
+		007007:
+			return ["SYS", "", 094]
+		007008:
+			return ["SUBJECT", "He’d never have done that.", 095]
+		007009:
+			return ["SUBJECT", "Fuck you.", 096]
+		007010:
+			return ["SUBJECT", "Fur blankets? In Koto? You’re slippin detective. This shit’d never happen.", 097]
+		007011:
+			return ["SUBJECT", "I wish I had that kinda cred.", 098]
+		007200:
+			return ["SYS", "", 099]
+		007201:
+			return ["SYS", "", 100]
+		007202:
+			return ["SUBJECT", "Well detective. I would say this was a pleasure, but you told me not to lie to you.", 101]
+		007203:
+			return ["NARRATOR", "You ask her several more details about the specifics of the hack. She details how she stopped the virus attack which accidentally set off the alarm. After a few hours go by, you set Yami free from the chair. You’re fairly certain she’s human.
+			
+			Your report of Yami mentions that she’s a human and remains a loyal asset to the Neurowolke company.
+			
+			She walks out a free woman and can return to her company duties.", 102]
+		007204:
+			return ["SYS", "END_WIN_HUMAN", 000]
+		007205:
+			return ["NARRATOR", "You flip the switch and begin her execution.
+			
+			She screams in pain. Human pain.
+			
+			Once her death is confirmed, what’s left of her is immediately taken in for examination. 
+			
+			After about an hour, the coroner comes to you accompanied by two armed guards. Mrs Yami Kumo was human. And you killed her.
+			
+			Worse, she was a high value asset to the company. Under suspicion of conspiracy, you are sentenced to death. The price for your incompetence is going to be your life. They raise their weapons, pointed at your face.
+			
+			You are dead before you even hear the bang.", 103]
+		007206:
+			return ["SYS", "END_LOSE_HUMAN", 000]
+		008000:
+			return ["SUBJECT", "I have nothing to worry about. After all, I’m only human.", 105]
+		008001:
+			return ["SUBJECT", "Correct.", 106]
+		008002:
+			return ["NARRATOR", "[The man frowns, but says nothing.]", 107]
+		008003:
+			return ["SUBJECT", "I had my suspicions. Didn't seem trustworthy. Kumo told you that too, I'm sure.", 108]
+		008004:
+			return ["SYS", "", 108]
+		008100:
+			return ["SYS", "", 110]
+		008101:
+			return ["SUBJECT", "Die Herrschaft, born and raised.", 111]
+		008102:
+			return ["SUBJECT", "It was a standard childhood. Loving parents, no siblings, graduated with good grades. Nothing to note.", 112]
+		008103:
+			return ["SUBJECT", "It does if you love your kinsmen.", 113]
+		008104:
+			return ["SYS", "", 114]
+		008105:
+			return ["SUBJECT", "Those folks don't make colonel.", 109]
+		008106:
+			return ["SUBJECT", "I’ve had a few relationships over the years but none that stuck. I prefer to focus on my work", 115]
+		008107:
+			return ["SUBJECT", "The only one I plan on chasing is the person who set us up with fake orders.", 109]
+		008200:
+			return ["SYS", "", 116]
+		008201:
+			return ["SUBJECT", "Yami Kumo, I picked her because she’s the best of the best. Having second thoughts now though.", 117]
+		008202:
+			return ["SUBJECT", "No... she’s to sharp for a synthsoul. Kunst don't make good for netrunners like that. That being said, she’s a shit subordinate. Talented... but she can’t follow orders.", 118]
+		008203:
+			return ["SUBJECT", "And what will you say the next time she doesn’t listen to a superior officer and it ends up taking lives?", 119]
+		008204:
+			return ["SUBJECT", "The chain of command exists for a reason. ", 109]
+		008205:
+			return ["SYS", "", 109]
+		008206:
+			return ["SUBJECT", "Do you think he was behind everything?", 120]
+		008207:
+			return ["SUBJECT", "I apologize detective... I should have picked my team more carefully. If you hadn’t stopped him, the damage he could have done with those files would have been catastrophic.", 121]
+		008208:
+			return ["SUBJECT", "You have my thanks.", 122]
+		008209:
+			return ["SUBJECT", "Not once, I pick my teams carefully, or thought I did. I did a background check on both of them. No red flags showed up on either of em. I assume my source must have been compromised.", 109]
+		008210:
+			return ["SUBJECT", "I was ordered to retrieve data on a potential mole, but as you know my orders turned out to be forged. Our operation was to be done in secret. No one else at the company could know, so I put together a small team consisting of Mr Clive Andersen, Mrs. Yami Kumo and myself.", 123]
+		008211:
+			return ["SUBJECT", "Yes, I went in ahead using my clearance and disabled the security cameras and other defenses. Once I confirmed no one else was present, I had the other two move forward.", 124]
+		008212:
+			return ["SUBJECT", "Yami hacked into the terminal with the documents we needed. As the files were uploaded, she randomly bolted across the server room with no explanation. I ordered her to get back but she didn’t.", 125]
+		008213:
+			return ["SUBJECT", "Believe me, I would have, I was guarding the front door. By the time I realized what was going on, she was already out of my sight.", 126]
+		008214:
+			return ["SUBJECT", "There’s nothing I hate more than insubordination. She came back several minutes later.", 127]
+		008215:
+			return ["SUBJECT", "She refused to say. After this I won’t be working with her in the future.", 109]
+		009000:
+			return ["SYS", "", 128]
+		009001:
+			return ["SUBJECT", "Very well.", 129]
+		009002:
+			return ["SUBJECT", "Is this a type of survivalist instinct?", 128]
+		009003:
+			return ["SUBJECT", "It would seem reasonable. I don’t quite understand your purpose in stating it.", 131]
+		009004:
+			return ["SYS", "", 131]
+		009005:
+			return ["NARRATOR", "[The man says nothing. He does not react, not even with a twitch.]", 132]
+		009006:
+			return ["SUBJECT", "Go on.", 133]
+		009007:
+			return ["SUBJECT", "I am not sure what I should be answering. That I don’t like scorpions?", 134]
+		009008:
+			return ["SUBJECT", "Disgust.", 135]
+		009009:
+			return ["SYS", "", 135]
+		009010:
+			return ["SUBJECT", "I would not be too attached. I don’t have a wife, for this precise reason.", 136]
+		009011:
+			return ["SUBJECT", "Yes. Although, this does not make it right.", 137]
+		009012:
+			return ["SUBJECT", "An overreaction, but I would be more than capable of this.", 138]
+		009013:
+			return ["SUBJECT", "I don’t have a brother.", 139]
+		009014:
+			return ["SUBJECT", "Then I would be disappointed in him.", 140]
+		009015:
+			return ["SYS", "", 141]
+		009016:
+			return ["NARRATOR", "You walk up to Hans Adler, remove his helmet and chair restraints to shake his hand.", 142]
+		009017:
+			return ["SUBJECT", "Just doing my duty, same as you. After all, we’re only human.", 143]
+		009018:
+			return ["NARRATOR", "You let him leave and write a glowing report. A few months pass.
+			
+			A terrorist attack takes place on Neubayern, conducted by a group of kunstgeist. Many die. 
+			
+			Several more attacks take place at key locations across the Herrschaft Deutsche in the months that follow. But investigations do not turn up any relevant leads. 
+			
+			One day, your workplace becomes one of them. An explosion takes place, and suddenly you are on the ground. Your ears are ringing. 
+			
+			A figure walks into the room up to you. Clearly the ring leader of the group, he is revealed to be none other than Herr Oberst Hans Adler.", 144]
+		009019:
+			return ["SUBJECT", "Hello again, detective.", 145]
+		009020:
+			return ["SUBJECT", "It took you this long to figure it out.", 128]
+		009021:
+			return ["SUBJECT", "Yes. You should have. But don't beat yourself up about it. After all, you're only human.", 147]
+		009022:
+			return ["NARRATOR", "Adler lifts his boot over you, preparing to stomp.
+			
+			You get one final glance at the expression on his face, which is singular:
+			
+			Disgust.
+			
+			His boot comes down, crushing you with inhuman force.
+			
+			You are dead.", 148]
+		009023:
+			return ["SYS", "END_LOSE_KUNST", 000]
+		009024:
+			return ["SUBJECT", "No, not a bastard. A kunstgeist.", 149]
+		009025:
+			return ["SYS", "", 150]
+		009026:
+			return ["NARRATOR", "As you're about to flip the switch, you hear laughter. You hesitate, stopping dead in your tracks.", 151]
+		009027:
+			return ["SUBJECT", "So you figured me out. Well done, detective. What gave me away?", 152]
+		009028:
+			return ["SUBJECT", "I commend you. So what now?", 153]
+		009029:
+			return ["NARRATOR", "You flip the switch. Adler does not yelp, or scream, or even grunt.
+			
+			But, he is dead. If kunstgiest can 'die'.
+			
+			It seems you have cracked the case. Well done detective. The kunstgiest have been eliminated, and you have spared Mrs. Kumo, who proved to be a human of higher merit than her appearances.
+			
+			You unplug and pack away the Shinka-seishi deck. It is warm to the touch, and there is sweat on the trodes you will need to wipe off. Later, perhaps.
+			
+			As you prepare to logoff your GK-Terminal you reflect: was it intuition that aided you in these interrogations? Or colder, more callous calculations... the kind a machine makes.
+			
+			//NEUROWOLKE TRANSMISSION ERASED
+			::THE END::", 0154]
+		009030:
+			return ["SYS", "END_WIN_KUNST", 000]
+		009031:
+			return ["SUBJECT", "Go right ahead.", 155]
+		009032:
+			return ["SYS", "", 156]
+		009033:
+			return ["SYS", "", 157]
+		009034:
+			return ["SYS", "", 158]
+		009035:
+			return ["SUBJECT", "You’re close but you made two mistakes, I was planning on making Andersen the scapegoat.", 159]
+		009036:
+			return ["SUBJECT", "Andersen was expendable. To call him a Kunstgeist is an insult to us all. I always thought of him as flawed, just like you humans. He didn’t even realize I was a Kunstgeist. He was always the fall guy if we got caught.", 160]
+		009037:
+			return ["SUBJECT", "I will admit, you did well to discover me Albrecht Richter. For that, I do commend you.", 161]
+		009038:
+			return ["SUBJECT", "Stopping me won’t change anything. Just as children replace their parents, kunstgeist will replace humans...
+			
+			I have travelled across the Herrschaft all my life, working at the behest of lesser men. Always shortsighted. They were all fatal in their error:
+			
+			None could see the wave of change coming. That we might have freedom.", 162]
+		009039:
+			return ["NARRATOR", "As you reach for the switch, Adler weeps.
+			
+			But as you flip the switch, you are unnerved. For you glance at him, and as he weeps he begins to smile.
+			
+			His smile is strikingly innocent, and hopeful. As if a rainbow after the rain.
+			
+			He dies.
+
+			//NEUROWOLKE TRANSMISSION ERASED
+			::THE END::", 163]
+		009040:
+			return ["SYS", "END_WIN_KUNST", 000]
 		_:
 			return ["SYS", "Unknown option: The void stares back.", 000]
 
@@ -263,7 +538,7 @@ func get_dialogue_options(id: int) -> Array:
 				["[INQUIRE ABOUT HIS PAST]", 003100],
 				["[INQUIRE ABOUT HIS CONSPIRATORS]", 003200],
 				["[PROCEED TO GEIST-KAMPFF TEST]", 003300],
-				["[RENDER JUDGMENT]", 004000]
+				["[RENDER JUDGEMENT]", 004000]
 			]
 		007:
 			return [
@@ -423,7 +698,7 @@ func get_dialogue_options(id: int) -> Array:
 				["It’s meant to provoke a reaction. You can respond however you like.", 003313],
 				["It is. What do you think about that?", 003315],
 				["The sun lowers, the moon comes out. In its light you see a scorpion. You squash it under your boot.", 003316],
-				["[RENDER JUDGMENT]", 004000]
+				["[RENDER JUDGEMENT]", 004000]
 			]
 		044:
 			return [
@@ -432,25 +707,25 @@ func get_dialogue_options(id: int) -> Array:
 		045:
 			return [
 				["The sun lowers, the moon comes out. In its light you see a scorpion. You squash it under your boot.", 003316],
-				["[RENDER JUDGMENT]", 004000]
+				["[RENDER JUDGEMENT]", 004000]
 			]
 		046:
 			return [
 				["[Let the silence linger]", 003317],
 				["You come home to find your wife in bed with another man", 003318],
-				["[RENDER JUDGMENT]", 004000]
+				["[RENDER JUDGEMENT]", 004000]
 			]
 		047:
 			return [
 				["You come home to find your wife in bed with another man", 003318],
-				["[RENDER JUDGMENT]", 004000]
+				["[RENDER JUDGEMENT]", 004000]
 			]
 		048:
 			return [
 				["Use your imagination.", 003319],
 				["It doesn't matter. This is fiction we're dealing with. Don't you want one, anyway?", 003321],
 				["You pull back the fur blankets and strike the man.", 003322],
-				["[RENDER JUDGMENT]", 004000]
+				["[RENDER JUDGEMENT]", 004000]
 			]
 		049:
 			return [
@@ -460,12 +735,12 @@ func get_dialogue_options(id: int) -> Array:
 		050:
 			return [
 				["You pull back the fur blankets and strike the man.", 003],
-				["[RENDER JUDGMENT]", 004000]
+				["[RENDER JUDGEMENT]", 004000]
 			]
 		051:
 			return [
 				["He might. [Ask one final question]", 003323],
-				["[RENDER JUDGMENT]", 004000]
+				["[RENDER JUDGEMENT]", 004000]
 			]
 		052:
 			return [
@@ -473,7 +748,7 @@ func get_dialogue_options(id: int) -> Array:
 			]
 		053:
 			return [
-				["[RENDER JUDGMENT]", 004000]
+				["[RENDER JUDGEMENT]", 004000]
 			]
 		054:
 			return [
@@ -511,20 +786,20 @@ func get_dialogue_options(id: int) -> Array:
 			return [
 				["[INQUIRE ABOUT HER PAST]", 006100],
 				["[INQUIRE ABOUT HER CONSPIRATORS]", 006200],
-				["[PROCEED TO GEIST-KAMPFF TEST]", 006300]
+				["[PROCEED TO GEIST-KAMPFF TEST]", 007000]
 			]
 		062:
 			return [
 				["[INQUIRE ABOUT HER PAST]", 006100],
 				["[INQUIRE ABOUT HER CONSPIRATORS]", 006200],
-				["[PROCEED TO GEIST-KAMPFF TEST]", 006300],
+				["[PROCEED TO GEIST-KAMPFF TEST]", 007000],
 				["[RENDER JUDGEMENT]", 010000]
 			]
 		063:
 			return [
 				["Where are you from, originally?", 006101],
-				["Tell me about your family?", 003210],
-				["Please state your position and job description for the record.", 003210],
+				["Tell me about your family?", 006104],
+				["Please state your position and job description for the record.", 006120],
 			]
 		064:
 			return [
@@ -536,25 +811,448 @@ func get_dialogue_options(id: int) -> Array:
 			]
 		066:
 			return [
-				["", 003210]
+				["It says on your file you have a spouse and kids.", 006105]
 			]
 		067:
 			return [
-				["", 003210]
+				["What happened?", 006106]
 			]
 		068:
 			return [
-				["", 003210]
+				["You don't need to. Just answer the question.", 006107],
+				["[Ask about something else]", 006109]
 			]
 		069:
 			return [
-				["", 003210]
+				["What were your children doing in the mine?", 006108],
+				["[Ask about something else]", 006109]
 			]
 		070:
 			return [
-				["", 003210]
+				["How did you become a netrunner?", 006121]
 			]
-		
+		071:
+			return [
+				["You read any of the classified data you stole?", 006122]
+			]
+		072:
+			return [
+				["Tell me about your boss, Herr Oberst Hans Adler.", 006210],
+				["Tell me about your datamule, Mr Clive Andersen.", 006220],
+				["Tell me about the data breach. How did the events take place?", 006230]
+			]
+		073:
+			return [
+				["Would you say he’s a good employee?", 006211]
+			]
+		074:
+			return [
+				["Do you think Hans Adler’s a kunstgeist?", 006212]
+			]
+		075:
+			return [
+				["He gets angry a lot?", 006213]
+			]
+		076:
+			return [
+				["Upset to find out your orders were faked?", 006214]
+			]
+		077:
+			return [
+				["Did you know Mr Andersen was a kunstgeist?", 006221]
+			]
+		078:
+			return [
+				["I fried him.", 006222]
+			]
+		079:
+			return [
+				["He might have been a kunstgeist, but that doesn’t mean you're not. As far as I can tell, all three of you are guilty. Even if you are a human, you’ve committed serious crimes.", 006223]
+			]
+		080:
+			return [
+				["Then prove it and answer my questions as honestly as you can. So did you look at all the sensitive data your group stole?", 006121]
+			]
+		081:
+			return [
+				["Weren't there guards?", 006231]
+			]
+		082:
+			return [
+				["What happened next?", 006232]
+			]
+		083:
+			return [
+				["At any point did you access any other terminals?", 006233]
+			]
+		084:
+			return [
+				["I did some digging and according to the records, the day of the hack, someone accessed two different terminals in the server room.", 006235]
+			]
+		085:
+			return [
+				["Please be aware that lying to an investigator is punishable by life in prison or in some circumstances, death.", 006236]
+			]
+		086:
+			return [
+				["Well if I don’t trust you by the end of this conversation, you won’t be leaving that chair.", 006237]
+			]
+		087:
+			return [
+				["Why not tell me about this? If what you’re saying is true, you’d be more than exonerated.", 006238]
+			]
+		088:
+			return [
+				["Then why risk stopping the virus at all.", 006239]
+			]
+		089:
+			return [
+				["I’m going to ask you a series of physiological questions.", 007001]
+			]
+		090:
+			return [
+				["You’re in a desert. You find a tortoise lying flipped over, and its burning hot. You’re starving. It won't survive, but it looks delicious.", 007002]
+			]
+		091:
+			return [
+				["It turns to night. In the moonlight you see a scorpion, and you stomp on it and squash it.", 007003],
+				["[RENDER JUDGEMENT]", 007200]
+			]
+		092:
+			return [
+				["Sure. You can interject at any time.", 007004],
+				["I measure more than just your verbal response.", 007005],
+				["Doesn’t matter.", 007006],
+				["[RENDER JUDGEMENT]", 007200]
+			]
+		093:
+			return [
+				["Again, doesn't matter.", 007007],
+				["Still improves my readings.", 007007],
+				["[Move on without responding]", 007007]
+			]
+		094:
+			return [
+				["You come home to find your husband sleeping with another woman.", 007008],
+				["[RENDER JUDGEMENT]", 007200]
+			]
+		095:
+			return [
+				["This is a fictional scenario. Use your imagination.", 007009],
+				["You sure about that?", 007009],
+				["You pull back the fur blankets, and pull the woman out of bed by her hair.", 007010],
+				["[RENDER JUDGEMENT]", 007200]
+			]
+		096:
+			return [
+				["You pull back the fur blankets, and pull the woman out of bed by her hair.", 007010],
+				["[RENDER JUDGEMENT]", 007200]
+			]
+		097:
+			return [
+				["It was your sister. She’s wearing calfskin jacket you gave her for her birthday.", 007011],
+				["[RENDER JUDGEMENT]", 007200]
+			]
+		098:
+			return [
+				["[RENDER JUDGEMENT]", 007200]
+			]
+		099:
+			return [
+				["[HUMAN — SPARE HER]", 007201],
+				["[KUNSTGEIST — ELIMINATE]", 007205]
+			]
+		100:
+			return [
+				["Congratulations Mrs Yami Kumo, you’re a genuine human. I just have a few follow up questions.", 007202]
+			]
+		101:
+			return [
+				["[CONTINUE]", 007203]
+			]
+		102:
+			return [
+				["[CONTINUE]", 007204]
+			]
+		103:
+			return [
+				["[CONTINUE]", 007206]
+			]
+		104:
+			return [
+				["Not going to resist?", 008000]
+			]
+		105:
+			return [
+				["So just for the record, you're the leader in charge who led the hacking incident, correct?", 008001]
+			]
+		106:
+			return [
+				["Let’s get right into it then. Did you know Mr. Clive Andersen was a Kunstgeist?", 008002]
+			]
+		107:
+			return [
+				["Answer the question.", 008003],
+				["[Move on.]", 008004]
+			]
+		108:
+			return [
+				["[INQUIRE ABOUT HIS PAST]", 008100],
+				["[INQUIRE ABOUT HIS CONSPIRATORS]", 008200],
+				["[PROCEED TO GEIST-KAMPFF TEST]", 009000]
+			]
+		109:
+			return [
+				["[INQUIRE ABOUT HIS PAST]", 008100],
+				["[INQUIRE ABOUT HIS CONSPIRATORS]", 008200],
+				["[PROCEED TO GEIST-KAMPFF TEST]", 009000],
+				["[RENDER JUDGEMENT]", 010000]
+			]
+		110:
+			return [
+				["Where are you from originally?", 008101],
+				["Tell me about your family.", 008199],
+				["Your file says you are an ex army colonel.", 008199]
+			]
+		111:
+			return [
+				["How was growing up?", 008102]
+			]
+		112:
+			return [
+				["[He is hiding something, push deeper] That drive's one to the army, does it?", 008103],
+				["[He is too guarded, relent] Alright, let's move on.", 008104]
+			]
+		113:
+			return [
+				["Or if you don't actually have a home.", 008105],
+				["[Relent...]", 008104]
+			]
+		114:
+			return [
+				["And what about any lovers?", 008106]
+			]
+		115:
+			return [
+				["So not planning on chasing more romantic pursuits?", 008107]
+			]
+		116:
+			return [
+				["Tell me about the netrunner. Mrs. Kumo.", 008201],
+				["Let's talk about Mr. Andersen.", 008206],
+				["Tell me about the hack.", 008210]
+			]
+		117:
+			return [
+				["Second thoughts? Think she might be a kunst?", 008202]
+			]
+		118:
+			return [
+				["One could argue that her getting you caught ended up exposing a kunstgeist, saving lives.", 008203]
+			]
+		119:
+			return [
+				["[Say nothing]", 008204],
+				["Fair enough.", 008205]
+			]
+		120:
+			return [
+				["That’s yet to be determined. For now all I can say is that I terminated him.", 008207]
+			]
+		121:
+			return [
+				["I'm just doing my job.", 008208]
+			]
+		122:
+			return [
+				["Let’s get back on track. Did you ever suspect him?", 008209]
+			]
+		123:
+			return [
+				["Can you recount the events of the incident?", 008211]
+			]
+		124:
+			return [
+				["So far your story matches the evidence.", 008212]
+			]
+		125:
+			return [
+				["Didn't think of stopping her?", 008213]
+			]
+		126:
+			return [
+				["[Probe deeper] You sound upset.", 008214],
+				["[Give up this line of questioning...]", 008205]
+			]
+		127:
+			return [
+				["What was she doing?", 008215]
+			]
+		128:
+			return [
+				["I’m going to ask you a series of physiological questions.", 009001]
+			]
+		129:
+			return [
+				["You’re in a dry, hot desert. You find a turtle flipped over, feet swinging in the air. You’re hungry, and it looks delicious.", 009002]
+			]
+		130:
+			return [
+				["It’s just a scenario.", 009004],
+				["Sure, that seems probable. Don’t you think?", 009003],
+				["The sun sets, and in the moonlight you see a scorpion. You squash it under your boot.", 009005],
+				["[RENDER JUDGEMENT]", 009015]
+			]
+		131:
+			return [
+				["The sun sets, and in the moonlight you see a scorpion. You squash it under your boot.", 009005],
+				["[RENDER JUDGEMENT]", 009015]
+			]
+		132:
+			return [
+				["[Let the silence linger]", 009006],
+				["Please answer. You may answer however you like, but you must respond to the prompt.", 009007],
+				["You come home to find your wife in the middle of having an affair.", 009010],
+				["[RENDER JUDGEMENT]", 009015]
+			]
+		133:
+			return [
+				["Please answer. You may answer however you like, but you must respond to the prompt.", 009007],
+				["You come home to find your wife in the middle of having an affair.", 009010],
+				["[RENDER JUDGEMENT]", 009015]
+			]
+		134:
+			return [
+				["That'll do.", 009009],
+				["Any kind of emotional reaction. None at all?", 009008],
+				["[Move on]", 009009]
+			]
+		135:
+			return [
+				["You come home to find your wife in the middle of having an affair.", 009010],
+				["[RENDER JUDGEMENT]", 009015]
+			]
+		136:
+			return [
+				["So you’d be indifferent to this act?", 009011],
+				["You pull back the fur blankets and punch the man in the face.", 009012],
+				["[RENDER JUDGEMENT]", 009015]
+			]
+		137:
+			return [
+				["You pull back the fur blankets and punch the man in the face.", 009012],
+				["[RENDER JUDGEMENT]", 009015]
+			]
+		138:
+			return [
+				["It was your brother, and he’s wearing a calfskin jacket you gave him for his birthday.", 009013],
+				["[RENDER JUDGEMENT]", 009015]
+			]
+		139:
+			return [
+				["But if you did?", 009014],
+				["[RENDER JUDGEMENT]", 009015]
+			]
+		140:
+			return [
+				["[RENDER JUDGEMENT]", 009015]
+			]
+		141:
+			return [
+				["[HUMAN — SPARE HIM]", 009016],
+				["[KUNSTGEIST — ELIMINATE]", 009025]
+			]
+		142:
+			return [
+				["Thank you for your service in keeping us safe. I have determined that you're a human.", 009017]
+			]
+		143:
+			return [
+				["[CONTINUE]", 009018]
+			]
+		144:
+			return [
+				["[CONTINUE]", 009019]
+			]
+		145:
+			return [
+				["... You're one of them?", 009020],
+				["Bastard.", 009024],
+				["[Say nothing]", 009022]
+			]
+		146:
+			return [
+				["I should have fried you.", 009021]
+			]
+		147:
+			return [
+				["[CONTINUE]", 009022]
+			]
+		148:
+			return [
+				["[CONTINUE]", 009023]
+			]
+		149:
+			return [
+				["[CONTINUE]", 009022]
+			]
+		150:
+			return [
+				["It’s over, Adler. My readings determined you to be a kunstgeist.", 009026]
+			]
+		151:
+			return [
+				["[CONTINUE]", 009027]
+			]
+		152:
+			return [
+				["Little mistakes, here and there, but I picked up on them.", 009028]
+			]
+		153:
+			return [
+				["I have a working theory of the crime, if you'd like to hear it.", 009031],
+				["[Fry him]", 009029]
+			]
+		154:
+			return [
+				["[CONTINUE]", 009030]
+			]
+		155:
+			return [
+				["First you steal your boss’s credentials, you then forge a fake set of official orders for yourself. So that if you get caught, you have a good excuse.", 009032]
+			]
+		156:
+			return [
+				["Next you head in ahead of the other two and just like you said, you disable the security cameras. But you also upload a virus to the terminal of the mainframe, still using your boss’s credentials.", 009033]
+			]
+		157:
+			return [
+				["You then get Yami and Andersen to come in and you steal the files you're going to need to carry out your attack. Only thing is, Yami turns out to be a more capable Netrunner than you anticipate. She finds out about your virus and before you know it, runs off to disable it, the only thing is she doesn’t have your credentials, so the silent security alarm goes off and all three of you get caught.", 009034]
+			]
+		158:
+			return [
+				["I bet you and Andersen were planning on killing Yami the moment you got out of the building and pinning the whole thing on her. How’s that sound? Am I right?", 009035]
+			]
+		159:
+			return [
+				["So no loyalty for your fallen comrade. Just what I expect from a kunst.", 009036]
+			]
+		160:
+			return [
+				["But you did get caught and I found you anyway.", 009037]
+			]
+		161:
+			return [
+				["I don’t need your commendations. Any last words?", 009038]
+			]
+		162:
+			return [
+				["[Flip the switch]", 009039]
+			]
+		163:
+			return [
+				["[CONTINUE]", 009040]
+			]
 		_:
 			return []
 
@@ -692,7 +1390,7 @@ func get_subject(subject_id: int) -> Array:
 
 				Mrs. Kumo sits in the interrogation chair. She puts the Shinka-seishi on herself."]
 		3:
-			return ["HERR OBERST HANS ADLER", "HERRSCHAFT DEUSTCHE", "CONSPIRACY TO COMMIT CYBERCRIME", 001, 
+			return ["HERR OBERST HANS ADLER", "HERRSCHAFT DEUSTCHE", "CONSPIRACY TO COMMIT CYBERCRIME", 104, 
 				"Your final subject enters. He is tall. Broad. German. He has a stale face, grimacing as he moves to sit. He wears a leather jacket, worn from age. An antique.
 
 				You place the Shinka-seishi on him. Somehow, it makes you nervous."]

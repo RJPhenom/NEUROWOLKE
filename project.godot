@@ -10,7 +10,8 @@ config_version=5
 
 [application]
 
-config/name="TROSTLOSIGKEIT"
+config/name="NEUROWOLKE"
+config/description="You are Detective Albrecht Richter. You work for NEUROWOLKE, a cloud data operator in the Herrschaft Deutsche. You find and eliminate Kunstgeist - fabricated human androids who have gone rogue. Interogate your subjects, using a Giest-Kampff test, and determine their humanity... and possibly your own."
 run/main_scene="uid://d1oi58t7stbuw"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
