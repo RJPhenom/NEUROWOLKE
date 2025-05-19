@@ -341,9 +341,19 @@ func get_dialogue_response(id: int) -> Array:
 		008103:
 			return ["SUBJECT", "It does if you love your kinsmen.", 113]
 		008104:
-			return ["SYS", "", 114]
+			return ["SYS", "", 109]
 		008105:
 			return ["SUBJECT", "Those folks don't make colonel.", 109]
+		008120:
+			return ["SUBJECT", "My parents still live in the Herrschaft. Nothing remarkable.", 114]
+		008130:
+			return ["SUBJECT", "I served die Herrschaft to the best of my ability. But, when Neurowolke took notice of my talents, they made me an offer I couldn’t refuse.", 164]
+		008131:
+			return ["SUBJECT", "Yes, Neurowolke made it a requirement when I joined them.", 165]
+		008132:
+			return ["SUBJECT", "Neurowolke used the best scientists to augment me. Ain’t no fake intelligence is going to override who I am, sir.", 166]
+		008133:
+			return ["SUBJECT", "Then I’ll die for the sake of the Herrschaft. As I have served all my life to.", 109]
 		008106:
 			return ["SUBJECT", "I’ve had a few relationships over the years but none that stuck. I prefer to focus on my work", 115]
 		008107:
@@ -385,7 +395,7 @@ func get_dialogue_response(id: int) -> Array:
 		009001:
 			return ["SUBJECT", "Very well.", 129]
 		009002:
-			return ["SUBJECT", "Is this a type of survivalist instinct?", 128]
+			return ["SUBJECT", "Is this a type of survivalist instinct?", 130]
 		009003:
 			return ["SUBJECT", "It would seem reasonable. I don’t quite understand your purpose in stating it.", 131]
 		009004:
@@ -1006,13 +1016,13 @@ func get_dialogue_options(id: int) -> Array:
 				["[INQUIRE ABOUT HIS PAST]", 008100],
 				["[INQUIRE ABOUT HIS CONSPIRATORS]", 008200],
 				["[PROCEED TO GEIST-KAMPFF TEST]", 009000],
-				["[RENDER JUDGEMENT]", 010000]
+				["[RENDER JUDGEMENT]", 009015]
 			]
 		110:
 			return [
 				["Where are you from originally?", 008101],
-				["Tell me about your family.", 008199],
-				["Your file says you are an ex army colonel.", 008199]
+				["Tell me about your family.", 008120],
+				["Your file says you are an ex army colonel.", 008130]
 			]
 		111:
 			return [
@@ -1253,6 +1263,18 @@ func get_dialogue_options(id: int) -> Array:
 			return [
 				["[CONTINUE]", 009040]
 			]
+		164:
+			return [
+				["Your file says you have an artificial intelligence implant?", 008131]
+			]
+		165:
+			return [
+				["There have been instances where implants are overwrittenn. Host becomes an organic kunst. With an AI in your head, how do I know your still Adler?", 008132]
+			]
+		166:
+			return [
+				["What if I don’t believe you?", 008133]
+			]
 		_:
 			return []
 
@@ -1293,6 +1315,8 @@ func write_to_dialogue_history(speaker: String, text: String, scrolling: bool, o
 		
 		return
 	
+	clear_dialogue_options()
+	
 	var history = dialogue_history.text
 	var speaker_prefix = "\n\n\n//" + speaker + ":   "
 	var appendage_text = text
@@ -1316,7 +1340,7 @@ func write_to_dialogue_history(speaker: String, text: String, scrolling: bool, o
 		if appendage_char != "\n":
 			play_random_keystroke()
 			scroll_to_end()
-			await get_tree().create_timer(0.004).timeout
+			await get_tree().create_timer(0.04).timeout
 		else:
 			scroll_to_end()
 			await get_tree().create_timer(0.4).timeout

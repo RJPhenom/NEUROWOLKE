@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cbqp0bkwddhxk" path="res://scripts/main_menu.gd" id="1_l6cm7"]
 [ext_resource type="Theme" uid="uid://llwmjcvp3pxj" path="res://styles/tros_theme.tres" id="2_ekxnf"]
-[ext_resource type="FontFile" uid="uid://cvi87wv605uvt" path="res://assets/bulletinV1.ttf" id="3_bqqt6"]
+[ext_resource type="FontFile" uid="uid://cvi87wv605uvt" path="res://assets/fonts/bulletinV1.ttf" id="3_bqqt6"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -11,12 +11,16 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 3
 script = ExtResource("1_l6cm7")
 
 [node name="MarginContainer2" type="MarginContainer" parent="."]
-layout_mode = 0
-offset_right = 1081.0
-offset_bottom = 1080.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer2"]
 layout_mode = 2
@@ -61,11 +65,7 @@ Use it to draw out your suspect's humanity… or its absence.
 
 ::MISSION::
 
-Recently there was a massive cyber attack on cloud data company NEUROWOLKE.  
-
-A  rogue kunstgeist collective claimed responsibility. Three perpetrators were caught.
-
-Normally they would receive summary execution. However, this attack seems to be an inside job: the perpetrators are all mid ranking members of NeuroWolke. 
+Recently there was a massive cyber attack on cloud data company NEUROWOLKE. 
 
 You must perform an interrogation. 
 
@@ -91,13 +91,15 @@ alignment = 0
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer2/HBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 10
+theme_override_constants/margin_right = 50
 
 [node name="Label" type="Label" parent="MarginContainer2/HBoxContainer/MarginContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 theme = ExtResource("2_ekxnf")
 theme_override_fonts/font = ExtResource("3_bqqt6")
-theme_override_font_sizes/font_size = 8
+theme_override_font_sizes/font_size = 6
 text = "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@:#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@

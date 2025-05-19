@@ -2,7 +2,7 @@
 
 [ext_resource type="Theme" uid="uid://llwmjcvp3pxj" path="res://styles/tros_theme.tres" id="1_uwrxv"]
 [ext_resource type="Script" uid="uid://8rrl28bs8y5l" path="res://scripts/game.gd" id="1_yqjtg"]
-[ext_resource type="FontFile" uid="uid://cvi87wv605uvt" path="res://assets/bulletinV1.ttf" id="3_lnu2h"]
+[ext_resource type="FontFile" uid="uid://cvi87wv605uvt" path="res://assets/fonts/bulletinV1.ttf" id="3_lnu2h"]
 
 [node name="Game" type="Control"]
 layout_mode = 3
@@ -11,6 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 3
 script = ExtResource("1_yqjtg")
 
 [node name="MarginContainer2" type="MarginContainer" parent="."]
@@ -38,7 +39,7 @@ theme_override_constants/separation = 25
 
 [node name="SubjectHbox" type="HBoxContainer" parent="MarginContainer2/HBoxContainer/DialogueMargin/DialogueVbox"]
 layout_mode = 2
-theme_override_constants/separation = 50
+theme_override_constants/separation = 20
 
 [node name="SubjectLabel" type="Label" parent="MarginContainer2/HBoxContainer/DialogueMargin/DialogueVbox/SubjectHbox"]
 layout_mode = 2
@@ -49,10 +50,12 @@ text = "//SUBJECT:
 
 [node name="SubjectDetails" type="Label" parent="MarginContainer2/HBoxContainer/DialogueMargin/DialogueVbox/SubjectHbox"]
 layout_mode = 2
+size_flags_horizontal = 3
 theme = ExtResource("1_uwrxv")
 text = "[NAME]
 [ORIGIN]
 [CRIME]"
+clip_text = true
 
 [node name="WarningLabel" type="Label" parent="MarginContainer2/HBoxContainer/DialogueMargin/DialogueVbox"]
 layout_mode = 2
@@ -85,6 +88,8 @@ theme_override_constants/separation = 10
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer2/HBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 10
+theme_override_constants/margin_right = 50
 
 [node name="Label" type="Label" parent="MarginContainer2/HBoxContainer/MarginContainer"]
 layout_mode = 2

@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://cv7ukspv2c85p"
-path="res://.godot/imported/PixelOperator8.ttf-6337ad86a5c68e2e8555711ed51a4e69.fontdata"
+uid="uid://cvi87wv605uvt"
+path="res://.godot/imported/bulletinV1.ttf-d6b2c79bb115c3df327e61af02862e95.fontdata"
 
 [deps]
 
-source_file="res://assets/PixelOperator8.ttf"
-dest_files=["res://.godot/imported/PixelOperator8.ttf-6337ad86a5c68e2e8555711ed51a4e69.fontdata"]
+source_file="res://assets/fonts/bulletinV1.ttf"
+dest_files=["res://.godot/imported/bulletinV1.ttf-d6b2c79bb115c3df327e61af02862e95.fontdata"]
 
 [params]
 
