@@ -7,6 +7,7 @@
 </h4>
 
 ![NEUROWOLKE Screenshot](https://img.itch.zone/aW1nLzIxMjIxMzk3LnBuZw==/315x250%23c/TpH1tQ.png)
+[Play on itch.io](https://phenomrj.itch.io/neurowolke)
 
 ## //: BACKGROUND 🤖
 You are Detective Richter, a neuro-op in the cyberpunk dystopian colonies of the Herrschaft Deutsche, comprising the systems of the Solar North.  
