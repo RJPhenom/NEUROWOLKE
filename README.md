@@ -6,7 +6,8 @@
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/godot/godot-original.svg" alt="Godot" width="36" style="vertical-align: middle; margin-right: 10px;" />
 </h4>
 
-![NEUROWOLKE Screenshot](https://img.itch.zone/aW1nLzIxMjIxMzk3LnBuZw==/315x250%23c/TpH1tQ.png)
+![NEUROWOLKE Screenshot](https://img.itch.zone/aW1nLzIxMjIxMzk3LnBuZw==/315x250%23c/TpH1tQ.png)  
+
 [Play on itch.io](https://phenomrj.itch.io/neurowolke)
 
 ## //: BACKGROUND 🤖
